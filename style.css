@@ -1,0 +1,84 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,0);
+}
+.distort{
+  font-size: 10em;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+}
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('https://firebasestorage.googleapis.com/v0/b/distort-81d12.appspot.com/o/poster.png?alt=media&token=8184b00d-f4dc-437a-a25a-fd36ef6e2f0a') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.inner {
+  padding: 2rem;
+}
+
+.cover {
+  padding: 0 1.5rem;
+}
+@media screen and (max-device-width: 800px) {
+    html {
+         background: url(https://firebasestorage.googleapis.com/v0/b/distort-81d12.appspot.com/o/poster.png?alt=media&token=8184b00d-f4dc-437a-a25a-fd36ef6e2f0a) no-repeat;
+         background-size: height;
+    }
+    .distort{
+      padding-top: 40%;
+      font-size: 4em;
+      font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    }
+    video {
+        display: none;
+    }
+}
+@media (min-width: 40em) {
+  /* Start the vertical centering */
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 62em) {
+  .mastfoot,
+  .cover-container {
+    width: 100%;
+  }
+}
